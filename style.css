@@ -1,0 +1,101 @@
+/* 기본 초기화 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+    font-family: 'Arial', sans-serif;
+}
+
+/* 계산기 본체 */
+.calculator-container {
+    width: 320px;
+    background-color: #333;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 20px 20px 25px rgba(0,0,0,0.3);
+}
+
+/* 결과창 화면 */
+.display {
+    background-color: #222;
+    color: white;
+    font-size: 3rem;
+    text-align: right;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    word-wrap: break-word;
+    word-break: keep-all;
+}
+
+/* 버튼 그리드 레이아웃 */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4열 구성 */
+    gap: 10px; /* 버튼 사이 간격 */
+}
+
+/* 공통 버튼 스타일 */
+.btn {
+    padding: 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #555;
+    color: white;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background-color: #777;
+}
+
+/* 연산자 버튼 색상 다르게 */
+.btn.operator {
+    background-color: #ff9f43;
+}
+
+.btn.operator:hover {
+    background-color: #ffb774;
+}
+
+/* 0번 버튼은 2칸 차지하게 (Grid 활용) */
+.btn.zero {
+    grid-column: span 2;
+}
+
+/* 결과(=) 버튼 강조 */
+.btn.result {
+    background-color: #2ecc71;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
